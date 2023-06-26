@@ -15,9 +15,9 @@
 * [X] aggiornare ***prisma ORM*** Chri
 * [x] implementare i ***metodi di /personaleStudio*** (SUPER-AMDIN) Simo
 * [X] implementare i ***metodi di /pazienti*** (doctors) Chri
-* [ ] creare ***tabella prenotazioni*** Chri
-* [ ] aggiornare ***prisma ORM***
-* [ ] implementare i ***metodi di /prenotazioni*** Simo
+* [X] creare ***tabella prenotazioni*** Chri
+* [X] aggiornare ***prisma ORM***
+* [X] implementare i ***metodi di /prenotazioni*** Simo
 
 ## Dati prenotazioni:
 Id INT AUTO_INCREMENT PRIMARY KEY,
