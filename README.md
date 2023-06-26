@@ -79,8 +79,8 @@ Essendo un progetto abbastanza formoso, è meglio fare un re-cap delle rotte che
  --***requestsForms***:per ogni azione nel body dovrà assere presente un "tokenAmm" per veriificare chi sta mandando le richieste.
 --GET-<code>{"tokenAmm":"foo"}</code>
 --GET-<code>{"doctorName":"foo","tokenAmm":"foo"}</code>
---PUT-<code>{"doctorName":"foo","tokenAmm":"foo"}</code> che risponde lo status dell'azione
---PUSH-<code>{"doctorName":"foo","doctorSurname":"foo","doctorEmail":"foo","doctorUsername":"foo","number":"foo","days":"foo","workTime":"H-H","tokenAmm": "foo"}</code> dove il back-end prende il name, lo carica sul database, con affianco un makeId(64) criptato
+--PUT-<code>{"doctorName":"foo","toChange":"il campo","data":"foobar","tokenAmm":"foo"}</code> che risponde lo status dell'azione
+--POST-<code>{"doctorName":"foo","doctorSurname":"foo","doctorEmail":"foo","doctorUsername":"foo","number":"foo","days":"foo","workTime":"H-H","tokenAmm": "foo"}</code> dove il back-end prende il name, lo carica sul database, con affianco un makeId(64) criptato
 
  - /pazienti: a questa rotta possono accederci solamente i dottori
 --***requestsForms***:per ogni azione nel body dovrà assere presente un "tokenAmm" per veriificare chi sta mandando le richieste.
