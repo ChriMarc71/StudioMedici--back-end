@@ -1,7 +1,11 @@
-const { prisma } = require("../../database/connection");
-const jwt = require("jsonwebtoken");
-const login = async (req, res) => {
-  const {username,password} = req.body;
+import { PrismaClient } from '@prisma/client';
+import { Request, Response } from 'express';
+import jwt from 'jsonwebtoken';
+
+const prisma = new PrismaClient();
+
+const login = async (req: Request, res: Response) => {
+  const { username, password } = req.body;
   const founded = await prisma.auth.findMany({
     select: {
       Id: true,
@@ -29,4 +33,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = {login};
+export { login };
