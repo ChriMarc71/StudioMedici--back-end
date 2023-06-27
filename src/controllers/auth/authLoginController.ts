@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client';
-import { Request, Response } from 'express';
-import jwt from 'jsonwebtoken';
+import { PrismaClient } from "@prisma/client";
+import { Request, Response } from "express";
+import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
@@ -13,7 +13,7 @@ const login = async (req: Request, res: Response) => {
     where: {
       Username: username,
       Password: password,
-      IsEnable: true
+      IsEnable: true,
     },
   });
   if (founded.length != 0) {
@@ -29,8 +29,10 @@ const login = async (req: Request, res: Response) => {
       Token: token,
     });
   } else {
-    res.send("Credentials invalid or account not enabled, check emails to confirm the account!");
+    res.send(
+      "Credentials invalid or account not enabled, check emails to confirm the account!"
+    );
   }
 };
 
-export default login ;
+export default login;

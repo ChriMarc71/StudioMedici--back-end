@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { makeId } from "../../utils/makeId";
 import Prisma from "../../database/connection";
 
-
 export const postNewDoctor = async (req: Request, res: Response) => {
   await Prisma.doctors.create({
     data: {
