@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-import dotenv from "dotenv";
 import adminRouter from "./src/routes/adminRoutes";
 import gestorRouter from "./src/routes/authRoutes";
 import bookingRouter from "./src/routes/bookingRoutes";
