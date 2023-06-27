@@ -1,2 +1,2 @@
-const CryptoJS = require("crypto-js");
-module.exports = CryptoJS
+import * as CryptoJS from "crypto-js";
+export default CryptoJS;
