@@ -1,3 +1,7 @@
-const validator = require("email-validator");
-const isValidEmail = (email)=>{ validator.validate(email); }
-module.exports = isValidEmail;
+import validator from "email-validator";
+
+const isValidEmail = (email: string): boolean => {
+  return validator.validate(email);
+}
+
+export default isValidEmail;
