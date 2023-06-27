@@ -1,32 +1,36 @@
 # TODO
-* [x] implemenentare ***l'util makeID(64)***
-* [x] implementare ***/auth/login*** Simo
-* [x] implementa l'assegnazione ***token temporaneo JWT*** Chri
-* [x] implementare il controllo ***middleware JWT*** Chri 
-* [X] implementare un ***mailValidator*** Chri
-* [x] implementare ***sendEmail*** con ***nodemailer*** (usando ***mailValidator***) Simo
-* [x] implementare ***/auth/register*** Simo
-* [x] implementare protocollo ***/auth/resetPassword*** Simo
-* [x] implementare protocollo ***/auth/forgottenPassword*** Simo
-* [X] creare ***tabella dottori/segreteria*** Chri
-* [X] aggiornare ***prisma ORM*** Chri
-* [X] middleware ***controllo tokenAmm*** (per controllare i ruoli delle pagine) Chri
-* [X] creare ***tabella pazienti*** Chri
-* [X] aggiornare ***prisma ORM*** Chri
-* [x] implementare i ***metodi di /personaleStudio*** (SUPER-AMDIN) Simo
-* [X] implementare i ***metodi di /pazienti*** (doctors) Chri
-* [X] creare ***tabella prenotazioni*** Chri
-* [X] aggiornare ***prisma ORM***
-* [X] implementare i ***metodi di /prenotazioni*** Simo
+
+- [x] implemenentare **_l'util makeID(64)_**
+- [x] implementare **_/auth/login_** Simo
+- [x] implementa l'assegnazione **_token temporaneo JWT_** Chri
+- [x] implementare il controllo **_middleware JWT_** Chri
+- [x] implementare un **_mailValidator_** Chri
+- [x] implementare **_sendEmail_** con **_nodemailer_** (usando **_mailValidator_**) Simo
+- [x] implementare **_/auth/register_** Simo
+- [x] implementare protocollo **_/auth/resetPassword_** Simo
+- [x] implementare protocollo **_/auth/forgottenPassword_** Simo
+- [x] creare **_tabella dottori/segreteria_** Chri
+- [x] aggiornare **_prisma ORM_** Chri
+- [x] middleware **_controllo tokenAmm_** (per controllare i ruoli delle pagine) Chri
+- [x] creare **_tabella pazienti_** Chri
+- [x] aggiornare **_prisma ORM_** Chri
+- [x] implementare i **_metodi di /personaleStudio_** (SUPER-AMDIN) Simo
+- [x] implementare i **_metodi di /pazienti_** (doctors) Chri
+- [x] creare **_tabella prenotazioni_** Chri
+- [x] aggiornare **_prisma ORM_**
+- [x] implementare i **_metodi di /prenotazioni_** Simo
 
 ## Dati prenotazioni:
+
 Id INT AUTO_INCREMENT PRIMARY KEY,
 StartTime DATETIME,
 EndTime DATETIME,
 PatientUsername VARCHAR(50),
 PatientNumber VARCHAR(50),
 DoctorUsername VARCHAR(50)
+
 ## Dati dottori:
+
 Id INT AUTO_INCREMENT PRIMARY KEY,
 Name VARCHAR(50),
 Surname VARCHAR(50),
@@ -37,7 +41,9 @@ Number VARCHAR(20),
 Doctor VARCHAR(50),
 TokenAmm VARCHAR(255),
 IsEnable TINYINT(1)
+
 ## Dati segreteria:
+
 Id INT AUTO_INCREMENT PRIMARY KEY,
 Name VARCHAR(50),
 Surname VARCHAR(50),
@@ -47,7 +53,9 @@ Password VARCHAR(50),
 Number VARCHAR(20),
 TokenAmm VARCHAR(255),
 IsEnable TINYINT(1)
+
 ## Dati pazienti:
+
 Id INT AUTO_INCREMENT PRIMARY KEY,
 Name VARCHAR(50),
 Surname VARCHAR(50),
