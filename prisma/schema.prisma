@@ -31,6 +31,7 @@ model patients {
   EmailConfirmed  Boolean?
   DoctorConfirmed Boolean?
   IsEnable        Boolean?
+  Token           String   @unique(map: "Token") @db.VarChar(255)
 }
 
 model secretariats {

@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
-  const founded = await prisma.auth.findMany({
+  const founded = await prisma.patients.findMany({
     select: {
       Id: true,
     },
@@ -33,4 +33,4 @@ const login = async (req: Request, res: Response) => {
   }
 };
 
-export { login };
+export default login ;

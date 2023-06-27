@@ -1,4 +1,4 @@
-function makeid(length: number): string {
+function makeId(length: number): string {
   let result = '';
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
@@ -9,4 +9,4 @@ function makeid(length: number): string {
   }
   return result;
 }
-export { makeid };
+export { makeId };

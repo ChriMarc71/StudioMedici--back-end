@@ -1,11 +1,10 @@
-mport * as express from 'express';
-import { Router } from 'express';
-import { authLoginController as login } from '../controllers/auth/authLoginController';
-import { authRegisterController as register } from '../controllers/auth/authRegisterController';
-import { authResetPasswordController as resetPassword } from '../controllers/auth/authResetPasswordController';
-import { authForgottenPasswordController as forgottenPassword } from '../controllers/auth/authForgottenPasswordController';
+import * as express from 'express';
+import  login  from '../controllers/auth/authLoginController';
+import  register  from '../controllers/auth/authRegisterController';
+import  resetPassword  from '../controllers/auth/authResetPasswordController';
+import  forgottenPassword  from '../controllers/auth/authForgottenPasswordController';
 
-const router: Router = express.Router();
+const router = express.Router();
 
 router.get('/login', login);
 router.post('/register', register);

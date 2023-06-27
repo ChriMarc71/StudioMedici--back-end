@@ -1,5 +1,4 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import Prisma from "../../database/connection";
 
 const updateDoctor = async (req: any, res: any) => {
     const doctorUsername: string = req.body.doctorUsername;
@@ -10,7 +9,7 @@ const updateDoctor = async (req: any, res: any) => {
         res.status(400).send("undefined field/s!");
     }
 
-    await prisma.doctors.update({
+    await Prisma.doctors.update({
         where: {
             Username: doctorUsername
         },

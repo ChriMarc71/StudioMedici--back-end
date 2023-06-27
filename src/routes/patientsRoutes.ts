@@ -1,16 +1,12 @@
-mport express, { Router } from "express";
-import { Request, Response, NextFunction } from "express";
-import roleVerifier from "../middlewares/roleVerifier";
-import { getPatients, updatePatients } from "../controllers/patients";
+import * as express from 'express';
+import {roleVerifier} from "../middlewares/roleVerifier";
+import  getPatients  from "../controllers/patients/getPatientController";
+import updatePatients from "../controllers/patients/updatePatientController";
 
-const router: Router = express.Router();
-
-router.route("/").all(roleVerifier(["admin","doctors"]))
-    .get((req: Request, res: Response, next: NextFunction) => {
-        getPatients(req, res, next);
-    })
-    .put((req: Request, res: Response, next: NextFunction) => {
-        updatePatients(req, res, next);
-    });
+const router = express.Router();
+router.use(roleVerifier)
+router.route("/")
+    .get(getPatients)
+    .put(updatePatients);
 
 export default router;

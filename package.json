@@ -8,10 +8,34 @@
     "jsonwebtoken": "^9.0.0",
     "mysql": "^2.18.1",
     "nodemailer": "^6.9.3",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.3.2",
+    "@types/nodemailer": "^6.4.8",
     "prisma": "^4.16.1",
     "typescript": "^5.1.3"
-  }
+  },
+  "name": "studiomedici--back-end",
+  "description": "Ci sono 2 parti distinte:\r - una pubblica, visibile a tutti gli utenti che navigano sul sito;\r - una privata, visibile solo a chi è autenticato e gestendo le pagine visibili a seconda dei\r ruoli (***medici*** o ***infermieri/admin*** – ***pazienti/user***).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChriMarc71/StudioMedici--back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChriMarc71/StudioMedici--back-end/issues"
+  },
+  "homepage": "https://github.com/ChriMarc71/StudioMedici--back-end#readme"
 }

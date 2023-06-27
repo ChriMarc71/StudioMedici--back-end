@@ -1,22 +1,23 @@
-import CryptoJS from "../utils/crypto";
+import Prisma from "../database/connection";
 import { Request, Response, NextFunction } from "express";
 
-async function controllRole(req: Request, res: Response, next: NextFunction, allowed: {[key: string]: boolean}): Promise<void> {
-  const tokenAmm = req.body.tokenAmm;
-  if (allowed.admin){
-    if ((await Prisma.admin.findUnique({where:{TokenAmm:tokenAmm}})).length != null){
+export const roleVerifier = (req: Request, res: Response, next: NextFunction,):void =>{
+  const tokenAmm: string = req.body.tokenAmm;
+  const path = req.path;
+  
+  if (path == "/admin"){
+    if (( Prisma.admin.findUnique({where:{TokenAmm:tokenAmm}})) != null){
         next();
     }
-  }else if(allowed.doctors){
-    if ((await Prisma.doctors.findUnique({where:{TokenAmm:tokenAmm}})).length != null){
+  }else if(path == "/booking" || path == "/patients"){
+    if (( Prisma.doctors.findUnique({where:{TokenAmm:tokenAmm}})) != null){
         next();
     }
-  }else if (allowed.secretaries){
-    if ((await Prisma.secretaries.findUnique({where:{TokenAmm:tokenAmm}})).length != null){
+    if (( Prisma.secretariats.findUnique({where:{TokenAmm:tokenAmm}})) != null){
         next();
     }
   }
   res.status(405).send("you are not allowed to access the resource if you are not in the staff");
 }
 
-export = controllRole;
+

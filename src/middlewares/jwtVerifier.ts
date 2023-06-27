@@ -11,7 +11,6 @@ function isValidJwt(req: Request, res: Response, next: NextFunction): void {
   jwt.verify(token, 'AlgernonAlgernonAlgernonAlgernon', { algorithms: ['HS256'] }, function (err, decoded) {
     if (err) {
       res.status(403).send(err.message);
-      return;
     }
   });
     
@@ -19,4 +18,3 @@ function isValidJwt(req: Request, res: Response, next: NextFunction): void {
 }
 
 export default isValidJwt;
-```

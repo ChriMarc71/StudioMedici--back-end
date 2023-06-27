@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
-import { PrismaClient } from "@prisma/client";
 import { makeId } from "../../utils/makeId";
+import Prisma from "../../database/connection";
 
-const prisma = new PrismaClient();
 
 export const postNewDoctor = async (req: Request, res: Response) => {
-  await prisma.doctors.create({
+  await Prisma.doctors.create({
     data: {
       Name: req.body.name,
       Surname: req.body.surname,
@@ -19,3 +18,5 @@ export const postNewDoctor = async (req: Request, res: Response) => {
   });
   res.send("created");
 };
+
+export default postNewDoctor;
