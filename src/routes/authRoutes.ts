@@ -4,11 +4,11 @@ import register from "../controllers/auth/authRegisterController";
 import resetPassword from "../controllers/auth/authResetPasswordController";
 import forgottenPassword from "../controllers/auth/authForgottenPasswordController";
 
-const router = express.Router();
+const gestorRouter = express.Router();
 
-router.get("/login", login);
-router.post("/register", register);
-router.put("/forgottenPassword", forgottenPassword);
-router.put("/resetPassword", resetPassword);
+gestorRouter.get("/login", login);
+gestorRouter.post("/register", register);
+gestorRouter.put("/forgottenPassword", forgottenPassword);
+gestorRouter.put("/resetPassword", resetPassword);
 
-export default router;
+export default gestorRouter;
