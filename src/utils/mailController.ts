@@ -1,12 +1,4 @@
-import * as nodemailer from "nodemailer";
-
-const mailTransporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "your_email@gmail.com",
-    pass: "your_email_password_here",
-  },
-});
+import mailTransporter from "./mailTransporter";
 
 export async function sendConfirmationEmail(
   email: string,
